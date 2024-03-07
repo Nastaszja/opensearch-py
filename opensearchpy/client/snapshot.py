@@ -191,6 +191,31 @@ class SnapshotClient(NamespacedClient):
         )
 
     @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def get_policy(self, policy, params=None, headers=None):
+        """
+        Get a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, ):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "GET",
+            _make_path("_plugins", "_sm", "policies", policy),
+            params=params,
+            headers=headers,
+        )
+
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
     def create_policy(self, policy, body, params=None, headers=None):
         """
         Creates a SM policy.
