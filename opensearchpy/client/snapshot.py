@@ -347,7 +347,7 @@ class SnapshotClient(NamespacedClient):
         :arg timeout: Explicit operation timeout
         """
         return self.transport.perform_request(
-            "POST",
+            "GET",
             _make_path("_plugins", "_sm", "policies", policy, "_explain"),
             params=params,
             headers=headers,
