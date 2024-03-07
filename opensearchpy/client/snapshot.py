@@ -333,6 +333,26 @@ class SnapshotClient(NamespacedClient):
             headers=headers,
         )
 
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def explain_policy(self, policy, params=None, headers=None):
+        """
+        Start a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        return self.transport.perform_request(
+            "POST",
+            _make_path("_plugins", "_sm", "policies", policy, "_explain"),
+            params=params,
+            headers=headers,
+        )
+
     @query_params("master_timeout", "cluster_manager_timeout", "wait_for_completion")
     def restore(self, repository, snapshot, body=None, params=None, headers=None):
         """
