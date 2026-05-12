@@ -392,6 +392,173 @@ class SnapshotClient(NamespacedClient):
             body=body,
         )
 
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def get_policy(self, policy, params=None, headers=None):
+        """
+        Get a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, ):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "GET",
+            _make_path("_plugins", "_sm", "policies", policy),
+            params=params,
+            headers=headers,
+        )
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def explain_policy(self, policy, params=None, headers=None):
+        """
+        Get a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, ):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "GET",
+            _make_path("_plugins", "_sm", "policies", policy, '_explain'),
+            params=params,
+            headers=headers,
+        )
+
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def create_policy(self, policy, body, params=None, headers=None):
+        """
+        Creates a SM policy.
+
+
+        :arg policy: A policy name
+        :arg body: The policy definition
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, body):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "POST",
+            _make_path("_plugins", "_sm", "policies", policy),
+            params=params,
+            headers=headers,
+            body=body,
+        )
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def put_policy(self, policy, body, params=None, headers=None):
+        """
+        Update a SM policy.
+
+
+        :arg policy: A policy name
+        :arg body: The policy definition
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, body):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "PUT",
+            _make_path("_plugins", "_sm", "policies", policy),
+            params=params,
+            headers=headers,
+            body=body,
+        )
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def delete_policy(self, policy, body, params=None, headers=None):
+        """
+        Delete a SM policy.
+
+
+        :arg policy: A policy name
+        :arg body: The policy definition
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        for param in (policy, body):
+            if param in SKIP_IN_PATH:
+                raise ValueError("Empty value passed for a required argument.")
+
+        return self.transport.perform_request(
+            "DELETE",
+            _make_path("_plugins", "_sm", "policies", policy),
+            params=params,
+            headers=headers,
+            body=body,
+        )
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def stop_policy(self, policy, params=None, headers=None):
+        """
+        Stop a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        return self.transport.perform_request(
+            "POST",
+            _make_path("_plugins", "_sm", "policies", policy, "_stop"),
+            params=params,
+            headers=headers,
+        )
+
+    @query_params("master_timeout", "cluster_manager_timeout", "timeout")
+    def start_policy(self, policy, params=None, headers=None):
+        """
+        Start a SM policy.
+
+
+        :arg policy: A policy name
+        :arg master_timeout (Deprecated: use cluster_manager_timeout): Explicit operation timeout for connection
+            to master node
+        :arg cluster_manager_timeout: Explicit operation timeout for connection
+            to cluster_manager node
+        :arg timeout: Explicit operation timeout
+        """
+        return self.transport.perform_request(
+            "POST",
+            _make_path("_plugins", "_sm", "policies", policy, "_start"),
+            params=params,
+            headers=headers,
+        )
+
     @query_params(
         "cluster_manager_timeout",
         "error_trace",
