@@ -324,10 +324,10 @@
 </li>
       <li><a href="api-ref/connection_pool.html#opensearchpy.ConnectionPool">ConnectionPool (class in opensearchpy)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/connection.html#opensearchpy.connections">connections (in module opensearchpy)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/connection_pool.html#opensearchpy.ConnectionSelector">ConnectionSelector (class in opensearchpy)</a>
 </li>
       <li><a href="api-ref/exceptions.html#opensearchpy.ConnectionTimeout">ConnectionTimeout (class in opensearchpy)</a>
@@ -384,6 +384,8 @@
         <li><a href="api-ref/clients/opensearch_client.html#opensearchpy.OpenSearch.create_pit">(opensearchpy.OpenSearch method)</a>
 </li>
       </ul></li>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.create_policy">create_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
+</li>
       <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.create_repository">create_repository() (opensearchpy.client.snapshot.SnapshotClient method)</a>
 </li>
       <li><a href="api-ref/clients/security_client.html#opensearchpy.client.security.SecurityClient.create_role">create_role() (opensearchpy.client.security.SecurityClient method)</a>
@@ -470,10 +472,10 @@
 </li>
       <li><a href="api-ref/clients/dangling_indices_client.html#opensearchpy.client.dangling_indices.DanglingIndicesClient.delete_dangling_index">delete_dangling_index() (opensearchpy.client.dangling_indices.DanglingIndicesClient method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/clients/indices_client.html#opensearchpy.client.indices.IndicesClient.delete_data_stream">delete_data_stream() (opensearchpy.client.indices.IndicesClient method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/clients/cluster_client.html#opensearchpy.client.cluster.ClusterClient.delete_decommission_awareness">delete_decommission_awareness() (opensearchpy.client.cluster.ClusterClient method)</a>
 </li>
       <li><a href="api-ref/plugins/alerting_plugin.html#opensearchpy.plugins.alerting.AlertingClient.delete_destination">delete_destination() (opensearchpy.plugins.alerting.AlertingClient method)</a>
@@ -500,8 +502,12 @@
         <li><a href="api-ref/clients/opensearch_client.html#opensearchpy.OpenSearch.delete_pit">(opensearchpy.OpenSearch method)</a>
 </li>
       </ul></li>
-      <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.delete_policy">delete_policy() (opensearchpy.plugins.index_management.IndexManagementClient method)</a>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.delete_policy">delete_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
+
+      <ul>
+        <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.delete_policy">(opensearchpy.plugins.index_management.IndexManagementClient method)</a>
 </li>
+      </ul></li>
       <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.delete_repository">delete_repository() (opensearchpy.client.snapshot.SnapshotClient method)</a>
 </li>
       <li><a href="api-ref/clients/security_client.html#opensearchpy.client.security.SecurityClient.delete_role">delete_role() (opensearchpy.client.security.SecurityClient method)</a>
@@ -597,6 +603,8 @@
 </li>
       </ul></li>
       <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.explain_index">explain_index() (opensearchpy.plugins.index_management.IndexManagementClient method)</a>
+</li>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.explain_policy">explain_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -774,8 +782,12 @@
 </li>
       <li><a href="api-ref/clients/ingest_client.html#opensearchpy.client.ingest.IngestClient.get_pipeline">get_pipeline() (opensearchpy.client.ingest.IngestClient method)</a>
 </li>
-      <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.get_policy">get_policy() (opensearchpy.plugins.index_management.IndexManagementClient method)</a>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.get_policy">get_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
+
+      <ul>
+        <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.get_policy">(opensearchpy.plugins.index_management.IndexManagementClient method)</a>
 </li>
+      </ul></li>
       <li><a href="api-ref/plugins/ml_plugin.html#opensearchpy.plugins.ml.MlClient.get_profile">get_profile() (opensearchpy.plugins.ml.MlClient method)</a>
 </li>
       <li><a href="api-ref/plugins/ml_plugin.html#opensearchpy.plugins.ml.MlClient.get_profile_models">get_profile_models() (opensearchpy.plugins.ml.MlClient method)</a>
@@ -1146,8 +1158,12 @@
       </ul></li>
       <li><a href="api-ref/clients/ingest_client.html#opensearchpy.client.ingest.IngestClient.put_pipeline">put_pipeline() (opensearchpy.client.ingest.IngestClient method)</a>
 </li>
-      <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.put_policy">put_policy() (opensearchpy.plugins.index_management.IndexManagementClient method)</a>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.put_policy">put_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
+
+      <ul>
+        <li><a href="api-ref/plugins/index_management_plugin.html#opensearchpy.plugins.index_management.IndexManagementClient.put_policy">(opensearchpy.plugins.index_management.IndexManagementClient method)</a>
 </li>
+      </ul></li>
       <li><a href="api-ref/clients/opensearch_client.html#opensearchpy.AsyncOpenSearch.put_script">put_script() (opensearchpy.AsyncOpenSearch method)</a>
 
       <ul>
@@ -1358,8 +1374,6 @@
 </li>
       <li><a href="api-ref/clients/cat_client.html#opensearchpy.client.cat.CatClient.segment_replication">segment_replication() (opensearchpy.client.cat.CatClient method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/clients/cat_client.html#opensearchpy.client.cat.CatClient.segments">segments() (opensearchpy.client.cat.CatClient method)</a>
 
       <ul>
@@ -1368,6 +1382,8 @@
         <li><a href="api-ref/helpers/index.html#opensearchpy.helpers.index.Index.segments">(opensearchpy.helpers.index.Index method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api-ref/connection_pool.html#opensearchpy.ConnectionSelector.select">select() (opensearchpy.ConnectionSelector method)</a>
 
       <ul>
@@ -1418,6 +1434,8 @@
 </li>
       <li><a href="api-ref/exceptions.html#opensearchpy.SSLError">SSLError (class in opensearchpy)</a>
 </li>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.start_policy">start_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
+</li>
       <li><a href="api-ref/clients/cluster_client.html#opensearchpy.client.cluster.ClusterClient.state">state() (opensearchpy.client.cluster.ClusterClient method)</a>
 </li>
       <li><a href="api-ref/clients/cluster_client.html#opensearchpy.client.cluster.ClusterClient.stats">stats() (opensearchpy.client.cluster.ClusterClient method)</a>
@@ -1433,6 +1451,8 @@
       <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.status">status() (opensearchpy.client.snapshot.SnapshotClient method)</a>
 </li>
       <li><a href="api-ref/exceptions.html#opensearchpy.TransportError.status_code">status_code (opensearchpy.TransportError property)</a>
+</li>
+      <li><a href="api-ref/clients/snapshot_client.html#opensearchpy.client.snapshot.SnapshotClient.stop_policy">stop_policy() (opensearchpy.client.snapshot.SnapshotClient method)</a>
 </li>
       <li><a href="api-ref/helpers/search.html#opensearchpy.helpers.search.Search.suggest">suggest() (opensearchpy.helpers.search.Search method)</a>
 </li>
